@@ -396,6 +396,74 @@
   @media (max-width: 980px) { .contact-layout { grid-template-columns: 1fr; } }
   @media (max-width: 600px) { .fields { grid-template-columns: 1fr; } .field.full { grid-column: auto; } .form, .card-pad { padding: 24px 20px; } }
 
+
+  /* Nav CV button */
+  .nav-actions { display: flex; align-items: center; gap: 8px; }
+  .nav-cv { display: inline-flex; align-items: center; gap: 7px; font: 600 13.5px var(--sans); color: var(--ink); background: transparent; border: 1px solid var(--stroke-2); padding: 8px 14px; border-radius: 999px; cursor: pointer; transition: border-color .2s, background .2s; }
+  .nav-cv:hover { border-color: var(--cyan); background: rgba(212,175,106,.08); }
+  .nav-cv svg { width: 16px; height: 16px; color: var(--cyan); }
+  button.btn { cursor: pointer; font: 600 15px var(--sans); }
+
+  /* CV quick view */
+  .cv-modal { padding: 0; border: 0; background: transparent; color: var(--ink); width: min(1040px, calc(100% - 32px)); max-width: none; height: min(88vh, 900px); max-height: none; overflow: visible; }
+  .cv-modal::backdrop { background: rgba(4,6,12,.72); backdrop-filter: blur(6px); }
+  .cv-modal[open] { animation: cvIn .35s cubic-bezier(.2,.8,.2,1); }
+  .cv-modal[open]::backdrop { animation: fadeIn .3s ease-out; }
+  @keyframes cvIn { from { opacity: 0; transform: translateY(18px) scale(.98); } }
+  .cv-shell { height: 100%; display: flex; flex-direction: column; border-radius: 22px; overflow: hidden; background: #0b1020; border: 1px solid var(--stroke-2); box-shadow: 0 40px 120px -20px rgba(0,0,0,.8), 0 0 0 1px rgba(212,175,106,.12); }
+  .cv-top { display: flex; align-items: center; gap: 16px; padding: 14px 16px 14px 20px; border-bottom: 1px solid var(--stroke); background: rgba(255,255,255,.02); }
+  .cv-who { display: flex; align-items: center; gap: 12px; min-width: 0; }
+  .cv-who img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2px #d4af6a; }
+  .cv-who b { display: block; font: 600 16px var(--display); }
+  .cv-who small { font: 500 11px var(--mono); color: var(--dim); letter-spacing: .06em; }
+  .cv-tabs { margin: 0 auto; display: flex; gap: 4px; padding: 4px; border-radius: 12px; background: rgba(255,255,255,.04); border: 1px solid var(--stroke); }
+  .cv-tabs button { font: 500 13.5px var(--sans); color: var(--muted); background: transparent; border: 0; padding: 7px 14px; border-radius: 9px; cursor: pointer; white-space: nowrap; }
+  .cv-tabs button[aria-selected="true"] { color: #0b0f1a; background: var(--grad); }
+  .cv-acts { display: flex; align-items: center; gap: 8px; }
+  .cv-acts .chip-btn svg { width: 15px; height: 15px; }
+  .cv-x { width: 36px; height: 36px; border-radius: 10px; border: 1px solid var(--stroke-2); background: transparent; color: var(--ink); cursor: pointer; font-size: 15px; }
+  .cv-x:hover { border-color: var(--cyan); }
+  .cv-body { flex: 1; min-height: 0; position: relative; }
+  .cv-pane { position: absolute; inset: 0; overflow: auto; }
+  .cv-pane[hidden] { display: none; }
+  .cv-doc { max-width: 900px; margin: 0 auto; padding: 36px 40px 48px; }
+  .cv-head { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding-bottom: 20px; border-bottom: 1px solid var(--stroke-2); }
+  .cv-head h3 { font: 600 34px/1 var(--display); letter-spacing: -.03em; margin: 0 0 8px; }
+  .cv-head p { margin: 0; color: var(--cyan); font-size: 15px; }
+  .cv-contact { list-style: none; margin: 0; padding: 0; font-size: 14px; color: var(--muted); text-align: right; }
+  .cv-contact a { color: var(--ink); }
+  .cv-sum { margin: 20px 0 6px; color: #d3d6dd; font-size: 15.5px; }
+  .cv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 40px; }
+  .cv-doc h4 { font: 500 11.5px var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--cyan); margin: 26px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--stroke); }
+  .cv-doc dl { margin: 0; }
+  .cv-doc dt { font-weight: 600; font-size: 14.5px; display: flex; justify-content: space-between; gap: 12px; margin-top: 10px; }
+  .cv-doc dt:first-child { margin-top: 0; }
+  .cv-doc dt span { font: 500 11.5px var(--mono); color: var(--dim); white-space: nowrap; padding-top: 3px; }
+  .cv-doc dd { margin: 3px 0 0; color: var(--muted); font-size: 13.5px; }
+  .cv-pubs { margin: 0; padding-left: 18px; font-size: 13.5px; color: #c9cdd6; }
+  .cv-pubs li { margin-bottom: 10px; }
+  .cv-pubs li::marker { color: var(--cyan); font-family: var(--mono); }
+  .cv-pubs a, .cv-skills a { color: var(--cyan); overflow-wrap: anywhere; }
+  .cv-skills { margin: 0; font-size: 13.5px; color: #c9cdd6; line-height: 1.75; }
+  .cv-skills b { color: var(--ink); font-weight: 600; }
+  .cv-pdf { width: 100%; height: 100%; border: 0; background: #2a2f3a; display: block; }
+  .cv-pdf-fallback { display: none; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 16px; color: var(--muted); text-align: center; padding: 24px; }
+  .no-inline-pdf .cv-pdf { display: none; }
+  .no-inline-pdf .cv-pdf-fallback { display: flex; }
+  @media (max-width: 760px) {
+    .nav-cv span { display: none; } .nav-cv { padding: 8px 10px; }
+    .cv-modal { width: 100%; height: 100%; max-height: 100dvh; margin: 0; }
+    .cv-shell { border-radius: 0; }
+    .cv-top { flex-wrap: wrap; padding: 12px 14px; gap: 10px; }
+    .cv-tabs { order: 3; width: 100%; } .cv-tabs button { flex: 1; }
+    .cv-acts { margin-left: auto; } .cv-acts .chip-btn span { display: none; }
+    .cv-doc { padding: 24px 18px 40px; }
+    .cv-grid { grid-template-columns: 1fr; }
+    .cv-contact { text-align: left; }
+    .cv-head h3 { font-size: 28px; }
+  }
+  @media print { .cv-modal { display: none !important; } }
+
   footer { padding: 70px 0 50px; color: var(--dim); font: 400 13px var(--mono); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
 
   /* Reveal on scroll */
@@ -473,7 +541,7 @@
         <li><a href="#skills">Skills</a></li>
       </ul>
     </nav>
-    <a class="nav-cta" href="#contact">Get in touch</a>
+    <div class="nav-actions"><button class="nav-cv" type="button" data-cv-open><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>CV</span></button><a class="nav-cta" href="#contact">Get in touch</a></div>
   </div>
 </header>
 
@@ -501,13 +569,13 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
           Email me
         </a>
-        <a class="btn" href="Mahnoor-Rashad-CV.pdf" target="_blank" rel="noopener">
+        <button class="btn" type="button" data-cv-open>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+          Quick view CV
+        </button>
+        <a class="btn" href="Mahnoor-Rashad-CV.pdf" download>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M12 12v6m-3-3 3 3 3-3"/></svg>
           Download CV
-        </a>
-        <a class="btn" href="#publications">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>
-          Publications
         </a>
       </div>
       <div class="profiles" data-profiles></div>
@@ -846,7 +914,7 @@
             <div class="quick">
               <a class="chip-btn" href="https://orcid.org/0009-0004-1528-5923" target="_blank" rel="noopener">ORCID ↗</a>
               <a class="chip-btn" href="https://www.linkedin.com/in/mahnoorrashad" target="_blank" rel="noopener">LinkedIn ↗</a>
-              <a class="chip-btn" href="Mahnoor-Rashad-CV.pdf" target="_blank" rel="noopener">CV (PDF) ↗</a>
+              <button class="chip-btn" type="button" data-cv-open>Quick view CV</button>
             </div>
           </div>
 
@@ -878,6 +946,101 @@
     <footer><span>© <span id="yr">2026</span> Mahnoor Rashad</span><span>Dubai, United Arab Emirates</span></footer>
   </div>
 </main>
+
+<dialog class="cv-modal" id="cvModal" aria-labelledby="cvTitle">
+  <div class="cv-shell">
+    <header class="cv-top">
+      <div class="cv-who">
+        <img src="mahnoor-rashad.jpg" alt="" width="44" height="44">
+        <div><b id="cvTitle">Mahnoor Rashad</b><small>Curriculum vitae · quick view</small></div>
+      </div>
+      <div class="cv-tabs" role="tablist">
+        <button role="tab" aria-selected="true" data-cv-tab="glance">At a glance</button>
+        <button role="tab" aria-selected="false" data-cv-tab="pdf">Full CV (PDF)</button>
+      </div>
+      <div class="cv-acts">
+        <a class="chip-btn" href="Mahnoor-Rashad-CV.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M12 12v6m-3-3 3 3 3-3"/></svg><span>Download</span></a>
+        <button class="cv-x" type="button" data-cv-close aria-label="Close">✕</button>
+      </div>
+    </header>
+
+    <div class="cv-body">
+      <section class="cv-pane" data-cv-pane="glance">
+        <div class="cv-doc">
+          <div class="cv-head">
+            <div>
+              <h3>Mahnoor Rashad</h3>
+              <p>Physics researcher · Nanomaterials &amp; electrochemical energy storage</p>
+            </div>
+            <ul class="cv-contact">
+              <li><a href="mailto:iammahnoorrashad@gmail.com">iammahnoorrashad@gmail.com</a></li>
+              <li><a href="https://orcid.org/0009-0004-1528-5923" target="_blank" rel="noopener">ORCID 0009-0004-1528-5923</a></li>
+              <li>Dubai, United Arab Emirates</li>
+            </ul>
+          </div>
+
+          <p class="cv-sum">Physics researcher working on the synthesis, characterization and optimization of metal-oxide heterostructures and doped ferrite nanomaterials for supercapacitor electrodes. MPhil Physics (3.88/4.0, Bronze Medal) with a first-author paper in <em>Physical Chemistry Chemical Physics</em>. Seeking a PhD position in Physics / Materials Science.</p>
+
+          <div class="cv-grid">
+            <div>
+              <h4>Education</h4>
+              <dl>
+                <dt>MPhil Physics <span>Feb 2024 – Dec 2025</span></dt>
+                <dd>The University of Lahore · GPA 3.88/4.0 · Bronze Medal (3rd position)</dd>
+                <dt>BS Physics <span>Sep 2021 – Jan 2024</span></dt>
+                <dd>The University of Lahore · GPA 3.72/4.0</dd>
+                <dt>B.Ed. (Secondary) <span>Apr 2025 – present</span></dt>
+                <dd>Virtual University of Pakistan · in progress</dd>
+              </dl>
+
+              <h4>Research experience</h4>
+              <dl>
+                <dt>Graduate Researcher <span>Feb 2024 – present</span></dt>
+                <dd>Dept. of Physics, The University of Lahore · Supervisor: Prof. Dr. M. Iftikhar Khan</dd>
+                <dd>• MPhil thesis: Bi-ion doping of co-precipitated NiSnFe₂O₄ nanoparticles for supercapacitor electrodes</dd>
+                <dd>• First author: Fe₂WO₆ heterostructures with V₂O₅ and g-C₃N₄ (PCCP, 2026)</dd>
+              </dl>
+
+              <h4>Teaching</h4>
+              <dl>
+                <dt>Science Teacher, KIPS School Lahore <span>Mar 2024 – Mar 2025</span></dt>
+                <dt>Private Tutor, O Level / IGCSE Physics &amp; Maths <span>Jan 2021 – present</span></dt>
+              </dl>
+            </div>
+            <div>
+              <h4>Publications &amp; presentations</h4>
+              <ol class="cv-pubs">
+                <li><b>Rashad M.</b>, Almohammedi A., Khan M. I., <i>et al.</i> Engineering Fe₂WO₆-based heterostructures for high-performance supercapacitors: the role of V₂O₅ and g-C₃N₄ integration. <em>Phys. Chem. Chem. Phys.</em> 28(28), 17417–17428 (2026). <a href="https://doi.org/10.1039/d6cp01274d" target="_blank" rel="noopener">doi:10.1039/d6cp01274d</a></li>
+                <li><b>Rashad M.</b> Modified structure of nickel tin ferrite by bismuth doping for high-performance supercapacitor. <i>Manuscript in preparation.</i></li>
+                <li><b>Rashad M.</b> Structural modification of nickel tin ferrites via bismuth doping for supercapacitors. ICETP, The University of Lahore, 8–9 Oct 2026 <i>(upcoming)</i>.</li>
+              </ol>
+
+              <h4>Honours</h4>
+              <dl><dt>Bronze Medal, MPhil Physics <span>May 2026</span></dt><dd>The University of Lahore · 3rd position</dd></dl>
+
+              <h4>Skills</h4>
+              <p class="cv-skills"><b>Synthesis:</b> co-precipitation, hydrothermal, in situ deposition, sol-gel (basics)<br>
+              <b>Characterization used:</b> XRD, FTIR, SEM, BET, UV–Vis, GCD, EIS<br>
+              <b>Tools:</b> OriginLab, scientific writing<br>
+              <b>Languages:</b> Urdu (native), English (C1 reading/listening, B2 writing/speaking)</p>
+
+              <h4>Reference</h4>
+              <p class="cv-skills">Prof. Dr. Muhammad Iftikhar Khan — HoD Physics, The University of Lahore · <a href="mailto:muhammad.iftikhar@phys.uol.edu.pk">muhammad.iftikhar@phys.uol.edu.pk</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cv-pane" data-cv-pane="pdf" hidden>
+        <iframe class="cv-pdf" data-src="Mahnoor-Rashad-CV.pdf#view=FitH" title="Mahnoor Rashad CV (PDF)"></iframe>
+        <div class="cv-pdf-fallback">
+          <p>Your browser can't show the PDF inside this window.</p>
+          <a class="btn primary" href="Mahnoor-Rashad-CV.pdf" target="_blank" rel="noopener">Open the PDF</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</dialog>
 
 <div class="toast" id="toast">BibTeX copied ✓</div>
 
@@ -1033,6 +1196,25 @@
         navigator.clipboard.writeText(b.dataset.copytext).then(function () { var t = b.textContent; b.textContent = 'Copied'; setTimeout(function () { b.textContent = t; }, 1500); });
       });
     });
+
+
+    /* ===== CV quick view ===== */
+    var cvm = document.getElementById('cvModal'), iframe = cvm.querySelector('.cv-pdf');
+    // Phones/tablets generally can't render a PDF inside a page — show an "open" button there instead
+    var inlinePdf = !/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) && (navigator.pdfViewerEnabled !== false);
+    if (!inlinePdf) cvm.classList.add('no-inline-pdf');
+    function cvTab(name) {
+      cvm.querySelectorAll('[data-cv-tab]').forEach(function (b) { b.setAttribute('aria-selected', b.dataset.cvTab === name); });
+      cvm.querySelectorAll('[data-cv-pane]').forEach(function (p) { p.hidden = p.dataset.cvPane !== name; });
+      if (name === 'pdf' && inlinePdf && !iframe.src) iframe.src = iframe.dataset.src;
+    }
+    document.querySelectorAll('[data-cv-open]').forEach(function (b) {
+      b.addEventListener('click', function () { cvTab('glance'); cvm.showModal(); document.body.style.overflow = 'hidden'; });
+    });
+    cvm.querySelectorAll('[data-cv-tab]').forEach(function (b) { b.addEventListener('click', function () { cvTab(b.dataset.cvTab); }); });
+    cvm.querySelector('[data-cv-close]').addEventListener('click', function () { cvm.close(); });
+    cvm.addEventListener('click', function (e) { if (e.target === cvm) cvm.close(); });
+    cvm.addEventListener('close', function () { document.body.style.overflow = ''; });
 
     /* Portrait: 3D tilt toward the pointer */
     var pt = document.getElementById('portrait');
