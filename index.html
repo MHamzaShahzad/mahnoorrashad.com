@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahnoor Rashad — Physics Researcher</title>
+<meta name="description" content="Mahnoor Rashad — physics researcher working on nanomaterials and metal-oxide heterostructures for supercapacitors and electrochemical energy storage. Seeking a PhD position in Physics / Materials Science.">
+<meta property="og:title" content="Mahnoor Rashad — Physics Researcher">
+<meta property="og:description" content="Nanomaterials and electrode materials for sustainable energy storage. MPhil Physics (3.88/4.0), first-author publication in PCCP.">
+<meta property="og:type" content="profile">
+<meta name="theme-color" content="#070a12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f7e7c1'/%3E%3Cstop offset='1' stop-color='%23c99a4e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%23070a12'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='700' font-size='26' fill='url(%23g)'%3EMR%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #070a12;
+    --bg-2: #0b1020;
+    --glass: rgba(255,255,255,.035);
+    --glass-2: rgba(255,255,255,.06);
+    --stroke: rgba(255,255,255,.08);
+    --stroke-2: rgba(255,255,255,.14);
+    --ink: #f5f1e8;
+    --muted: #9aa0ad;
+    --dim: #626878;
+    --cyan: #d4af6a;
+    --violet: #ead7ab;
+    --amber: #e0b25c;
+    --pink: #9fb4d0;
+    --grad: linear-gradient(100deg, #f7e7c1 0%, #e2c285 35%, #c99a4e 70%, #f2dcaa 100%);
+    --display: "Space Grotesk", system-ui, sans-serif;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    --r: 22px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.65 var(--sans); -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  ::selection { background: rgba(212,175,106,.3); }
+  a { color: var(--cyan); text-decoration: none; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+  .grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .mono { font-family: var(--mono); }
+
+  /* Ambient background: aurora blobs + grid + grain */
+  .ambient { position: fixed; inset: 0; z-index: -2; pointer-events: none; overflow: hidden; }
+  .blob { position: absolute; border-radius: 50%; filter: blur(110px); opacity: .45; animation: drift 26s ease-in-out infinite alternate; }
+  .blob.b1 { width: 620px; height: 620px; background: #16305a; top: -220px; left: -160px; }
+  .blob.b2 { width: 560px; height: 560px; background: #1b2a4a; top: 30%; right: -220px; animation-delay: -8s; opacity: .35; }
+  .blob.b3 { width: 480px; height: 480px; background: #5a4220; bottom: -240px; left: 30%; animation-delay: -16s; opacity: .22; }
+  @keyframes drift { to { transform: translate(80px, 60px) scale(1.15); } }
+  .gridbg {
+    position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background-image: linear-gradient(var(--stroke) 1px, transparent 1px), linear-gradient(90deg, var(--stroke) 1px, transparent 1px);
+    background-size: 64px 64px; opacity: .35;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
+  }
+  .grain { position: fixed; inset: -50%; z-index: 100; pointer-events: none; opacity: .05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+  /* Scroll progress */
+  .progress { position: fixed; top: 0; left: 0; height: 2px; width: 100%; transform-origin: 0 50%; transform: scaleX(0); background: var(--grad); z-index: 60; }
+
+  /* Floating nav */
+  .nav { position: fixed; top: 16px; left: 50%; transform: translateX(-50%); z-index: 50; width: min(1120px, calc(100% - 32px)); }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 10px 10px 10px 20px; border-radius: 999px;
+    background: rgba(10,14,26,.55); border: 1px solid var(--stroke);
+    backdrop-filter: blur(18px) saturate(160%); -webkit-backdrop-filter: blur(18px) saturate(160%);
+    transition: background .3s, border-color .3s;
+  }
+  .nav.scrolled .nav-inner { background: rgba(10,14,26,.8); border-color: var(--stroke-2); }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); font: 600 16px var(--display); letter-spacing: -.01em; white-space: nowrap; }
+  .brand-mark { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; font: 700 12px var(--display); color: #0b0f1a; background: var(--grad); }
+  .nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
+  .nav ul a { color: var(--muted); font-size: 14px; font-weight: 500; padding: 8px 14px; border-radius: 999px; transition: color .2s, background .2s; }
+  .nav ul a:hover, .nav ul a.active { color: var(--ink); background: var(--glass-2); }
+  .nav-cta { font: 600 14px var(--sans); color: #0b0f1a; background: var(--ink); padding: 9px 18px; border-radius: 999px; white-space: nowrap; transition: transform .2s, box-shadow .2s; }
+  .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 0 0 4px rgba(212,175,106,.2); }
+
+  /* HERO */
+  .hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: center; padding: 120px 0 80px; overflow: hidden; }
+  #lattice { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
+  .hero::after { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background: radial-gradient(ellipse 55% 60% at 22% 52%, rgba(7,10,18,.7), transparent 70%); }
+  .hero .wrap { position: relative; z-index: 1; width: 100%; }
+  .status {
+    display: inline-flex; align-items: center; gap: 10px; padding: 7px 14px 7px 10px; border-radius: 999px;
+    background: rgba(212,175,106,.08); border: 1px solid rgba(212,175,106,.25); color: #f0dcb0;
+    font: 500 13px var(--mono); letter-spacing: .02em;
+  }
+  .live { position: relative; width: 8px; height: 8px; border-radius: 50%; background: #7fd1a4; }
+  .live::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid #7fd1a4; animation: ping 1.8s cubic-bezier(0,0,.2,1) infinite; }
+  @keyframes ping { 75%, 100% { transform: scale(2); opacity: 0; } }
+  h1.name {
+    font: 700 clamp(56px, 10.5vw, 140px)/0.92 var(--display); letter-spacing: -0.045em; margin: 28px 0 24px;
+  }
+  h1.name .line { display: block; overflow: hidden; }
+  h1.name .line span { display: inline-block; transform: translateY(105%); animation: rise 1.1s cubic-bezier(.2,.8,.2,1) forwards; }
+  h1.name .line:nth-child(2) span { animation-delay: .12s; }
+  @keyframes rise { to { transform: none; } }
+  h1.name .grad-text { background-size: 200% 100%; animation: rise 1.1s .12s cubic-bezier(.2,.8,.2,1) forwards, sheen 8s linear infinite; }
+  @keyframes sheen { to { background-position: -200% 0; } }
+  .tagline { font: 400 clamp(18px, 2.2vw, 24px)/1.5 var(--sans); color: var(--muted); max-width: 640px; margin: 0 0 36px; }
+  .tagline .rot { color: var(--ink); font-weight: 500; display: inline-block; border-right: 2px solid var(--cyan); padding-right: 4px; animation: caret 1s steps(1) infinite; white-space: nowrap; }
+  @keyframes caret { 50% { border-color: transparent; } }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .btn {
+    position: relative; display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 14px;
+    font: 600 15px var(--sans); color: var(--ink); background: var(--glass-2); border: 1px solid var(--stroke-2);
+    backdrop-filter: blur(10px); transition: transform .25s, border-color .25s, background .25s, box-shadow .25s;
+  }
+  .btn:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.3); background: rgba(255,255,255,.09); }
+  .btn svg { width: 18px; height: 18px; flex: none; }
+  .btn.primary { color: #0b0f1a; background: var(--grad); border: 0; box-shadow: 0 10px 40px -10px rgba(212,175,106,.7); }
+  .btn.primary:hover { box-shadow: 0 14px 50px -8px rgba(212,175,106,.7); }
+  .profiles { display: flex; flex-wrap: wrap; gap: 8px; }
+  .hero .profiles { margin-top: 22px; }
+  .profile { display: inline-flex; align-items: center; gap: 8px; font: 500 13px var(--mono); color: var(--muted); border: 1px solid var(--stroke); border-radius: 999px; padding: 5px 13px 5px 6px; background: var(--glass); transition: color .2s, border-color .2s; }
+  .profile:hover { color: var(--ink); border-color: var(--stroke-2); }
+  .profile i { font: 700 10px var(--sans); font-style: normal; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; color: #fff; }
+  .scroll-hint { position: absolute; bottom: 72px; left: 50%; transform: translateX(-50%); z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--dim); font: 500 11px var(--mono); letter-spacing: .2em; text-transform: uppercase; }
+  .scroll-hint .mouse { width: 22px; height: 34px; border: 1.5px solid var(--dim); border-radius: 12px; position: relative; }
+  .scroll-hint .mouse::after { content: ""; position: absolute; left: 50%; top: 7px; width: 3px; height: 7px; margin-left: -1.5px; border-radius: 2px; background: var(--cyan); animation: wheel 1.8s ease-in-out infinite; }
+  @keyframes wheel { 0% { opacity: 0; transform: translateY(-3px); } 40% { opacity: 1; } 100% { opacity: 0; transform: translateY(9px); } }
+
+  /* Stats strip */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: -40px; position: relative; z-index: 2; }
+  .stat { padding: 24px 22px; }
+  .stat .v { font: 600 clamp(32px, 4vw, 44px)/1 var(--display); letter-spacing: -.03em; }
+  .stat .v small { font-size: .45em; color: var(--muted); font-weight: 500; margin-left: 2px; }
+  .stat .l { margin-top: 10px; color: var(--muted); font-size: 13.5px; }
+  .stat .k { font: 500 11px var(--mono); color: var(--dim); text-transform: uppercase; letter-spacing: .14em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .stat .k::before { content: ""; width: 6px; height: 6px; border-radius: 2px; background: var(--c, var(--cyan)); box-shadow: 0 0 12px var(--c, var(--cyan)); }
+
+  /* Glass card + cursor spotlight */
+  .glass {
+    position: relative; border-radius: var(--r); background: var(--glass); border: 1px solid var(--stroke);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); overflow: hidden; isolation: isolate;
+  }
+  .glass::before {
+    content: ""; position: absolute; inset: 0; z-index: -1; opacity: 0; transition: opacity .35s;
+    background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(212,175,106,.14), transparent 45%);
+  }
+  .glass:hover::before { opacity: 1; }
+  .glass::after {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none; opacity: 0; transition: opacity .35s;
+    background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(212,175,106,.6), transparent 60%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  }
+  .glass:hover::after { opacity: 1; }
+
+  /* Marquee */
+  .marquee { margin: 90px 0 0; padding: 22px 0; border-block: 1px solid var(--stroke); overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+  .track { display: flex; gap: 48px; width: max-content; animation: scroll 40s linear infinite; }
+  .track span { font: 500 clamp(18px, 2.2vw, 24px) var(--display); color: var(--dim); white-space: nowrap; display: flex; align-items: center; gap: 48px; }
+  .track span::after { content: "✦"; font-size: 14px; color: var(--violet); }
+  .track span:nth-child(3n+1) { color: var(--muted); }
+  @keyframes scroll { to { transform: translateX(-50%); } }
+
+  /* Sections */
+  section.block { padding: 130px 0 0; }
+  .sec-head { margin-bottom: 48px; max-width: 760px; }
+  .eyebrow { font: 500 12px var(--mono); color: var(--cyan); letter-spacing: .18em; text-transform: uppercase; display: flex; align-items: center; gap: 12px; }
+  .eyebrow b { color: var(--dim); font-weight: 500; }
+  .eyebrow::after { content: ""; height: 1px; width: 60px; background: linear-gradient(90deg, var(--cyan), transparent); }
+  h2 { font: 600 clamp(36px, 5vw, 60px)/1.02 var(--display); letter-spacing: -.035em; margin: 18px 0 0; }
+  .sec-head p { color: var(--muted); font-size: 18px; margin: 18px 0 0; }
+
+  /* Research bento */
+  .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+  .bento .about { grid-column: span 4; padding: 36px; }
+  .bento .about p { font-size: 18px; line-height: 1.7; color: #d3d6dd; margin: 0 0 16px; }
+  .bento .about p:last-child { margin: 0; }
+  .bento .about strong { color: var(--ink); font-weight: 600; }
+  .bento .gcd { grid-column: span 2; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; }
+  .bento .focus { grid-column: span 2; padding: 28px; }
+  .bento .interests { grid-column: span 6; padding: 30px 36px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; }
+  .interests p { margin: 10px 0 0; font-size: 17px; color: #d3d6dd; }
+  .interests strong { color: var(--ink); font-weight: 600; }
+  @media (max-width: 980px) { .bento .interests { grid-template-columns: 1fr; padding: 26px; } }
+  .t-item li b { color: var(--ink); font-weight: 600; }
+  .icon { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; background: linear-gradient(135deg, rgba(212,175,106,.18), rgba(234,215,171,.18)); border: 1px solid var(--stroke-2); color: var(--cyan); margin-bottom: 22px; }
+  .icon svg { width: 22px; height: 22px; }
+  .focus h3 { font: 600 20px var(--display); letter-spacing: -.01em; margin: 0 0 8px; }
+  .focus p { margin: 0; color: var(--muted); font-size: 15px; }
+  .label { font: 500 11px var(--mono); color: var(--dim); text-transform: uppercase; letter-spacing: .14em; }
+  .gcd svg { width: 100%; height: auto; overflow: visible; }
+  .gcd .curve { fill: none; stroke: url(#gcdGrad); stroke-width: 2.5; stroke-linejoin: round; stroke-dasharray: 900; stroke-dashoffset: 900; }
+  .gcd.in .curve { animation: draw 3s ease-out forwards; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  .gcd .axis { stroke: var(--stroke-2); stroke-width: 1; }
+  .gcd .big { font: 600 34px/1 var(--display); letter-spacing: -.03em; }
+
+  /* Publications */
+  .feature { padding: 2px; border-radius: 26px; position: relative; overflow: hidden; isolation: isolate; }
+  .feature::before {
+    content: ""; position: absolute; inset: -60%; z-index: -1;
+    background: conic-gradient(from 0deg, transparent 0 55%, #a8803f 68%, #f7e7c1 80%, #d4af6a 88%, transparent 100%);
+    animation: spin 6s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(1turn); } }
+  .feature-inner { border-radius: 24px; background: linear-gradient(180deg, #0c1120, #080b15); padding: 40px; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; }
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .badge { font: 500 11.5px var(--mono); letter-spacing: .04em; padding: 5px 11px; border-radius: 999px; border: 1px solid; }
+  .badge.ok { color: #a7dcbf; border-color: rgba(167,220,191,.28); background: rgba(127,209,164,.07); }
+  .badge.v { color: #ead7ab; border-color: rgba(234,215,171,.3); background: rgba(234,215,171,.08); }
+  .badge.wip { color: #e9c47e; border-color: rgba(233,196,126,.3); background: rgba(224,178,92,.08); }
+  .badge.c { color: #e2c285; border-color: rgba(226,194,133,.3); background: rgba(212,175,106,.08); }
+  .feature h3 { font: 600 clamp(22px, 2.6vw, 30px)/1.22 var(--display); letter-spacing: -.02em; margin: 0 0 16px; }
+  .authors { color: var(--muted); font-size: 14.5px; margin: 0 0 6px; }
+  .authors b { color: var(--ink); }
+  .journal { font-size: 15px; color: #d3d6dd; margin: 0; }
+  .journal em { color: var(--ink); }
+  .metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-content: start; }
+  .metric { padding: 18px; border-radius: 16px; background: rgba(255,255,255,.03); border: 1px solid var(--stroke); }
+  .metric .v { font: 600 28px/1 var(--display); letter-spacing: -.02em; }
+  .metric .v small { font-size: 13px; color: var(--muted); font-weight: 500; margin-left: 3px; }
+  .metric .l { font-size: 12.5px; color: var(--muted); margin-top: 8px; line-height: 1.4; }
+  .metric.hl { background: linear-gradient(135deg, rgba(212,175,106,.12), rgba(234,215,171,.12)); border-color: rgba(212,175,106,.35); grid-column: span 2; }
+  .metric.hl .v { font-size: 40px; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+  .chip-btn { display: inline-flex; align-items: center; gap: 7px; font: 500 13px var(--mono); color: var(--ink); background: var(--glass-2); border: 1px solid var(--stroke-2); padding: 8px 14px; border-radius: 10px; cursor: pointer; transition: border-color .2s, background .2s; }
+  .chip-btn:hover { border-color: var(--cyan); background: rgba(212,175,106,.08); }
+  details.abstract { margin-top: 20px; border-top: 1px solid var(--stroke); padding-top: 16px; }
+  details.abstract summary { cursor: pointer; font: 500 13px var(--mono); color: var(--cyan); list-style: none; display: flex; align-items: center; gap: 8px; }
+  details.abstract summary::-webkit-details-marker { display: none; }
+  details.abstract summary::before { content: "+"; display: grid; place-items: center; width: 18px; height: 18px; border-radius: 5px; border: 1px solid currentColor; font-size: 13px; transition: transform .25s; }
+  details.abstract[open] summary::before { transform: rotate(45deg); }
+  details.abstract p { color: #b9bdc7; font-size: 15px; margin: 14px 0 0; }
+  .pub-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+  .pub-card { padding: 30px; }
+  .pub-card h3 { font: 600 20px/1.3 var(--display); letter-spacing: -.01em; margin: 0 0 10px; }
+  .pub-card p { margin: 0; color: var(--muted); font-size: 14.5px; }
+  .yr { font: 500 12px var(--mono); color: var(--dim); }
+
+  /* Timeline */
+  .timeline { position: relative; padding-left: 36px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: var(--stroke); border-radius: 2px; }
+  .timeline .fill { position: absolute; left: 7px; top: 8px; width: 2px; height: 0; background: linear-gradient(180deg, var(--cyan), var(--violet), var(--pink)); border-radius: 2px; box-shadow: 0 0 14px rgba(212,175,106,.6); }
+  .t-item { position: relative; margin-bottom: 18px; padding: 28px 30px; }
+  .t-item:last-child { margin-bottom: 0; }
+  .t-item .dot { position: absolute; left: -36px; top: 34px; width: 16px; height: 16px; border-radius: 50%; background: var(--bg); border: 2px solid var(--c, var(--cyan)); box-shadow: 0 0 0 5px var(--bg), 0 0 16px var(--c, var(--cyan)); }
+  .t-top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
+  .t-item h3 { font: 600 21px var(--display); letter-spacing: -.01em; margin: 0; }
+  .when { font: 500 12.5px var(--mono); color: var(--muted); white-space: nowrap; }
+  .where { color: var(--muted); font-size: 15px; margin: 4px 0 14px; }
+  .kind { font: 500 10.5px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--c, var(--cyan)); margin-bottom: 8px; display: block; }
+  .t-item ul { margin: 0; padding: 0; list-style: none; }
+  .t-item li { position: relative; padding-left: 20px; margin-bottom: 8px; color: #d3d6dd; font-size: 15.5px; }
+  .t-item li::before { content: ""; position: absolute; left: 0; top: 11px; width: 8px; height: 1.5px; background: var(--c, var(--cyan)); }
+  .t-item li:last-child { margin-bottom: 0; }
+  .chem { white-space: nowrap; }
+
+  /* Education */
+  .edu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .edu-card { padding: 30px; display: flex; flex-direction: column; gap: 18px; }
+  .ring { --p: 0; width: 108px; height: 108px; border-radius: 50%; display: grid; place-items: center; position: relative;
+    background: conic-gradient(from -90deg, var(--cyan), var(--violet) calc(var(--p) * 1%), rgba(255,255,255,.06) 0); }
+  .ring::before { content: ""; position: absolute; inset: 7px; border-radius: 50%; background: #090c17; }
+  .ring span { position: relative; font: 600 26px/1 var(--display); letter-spacing: -.02em; text-align: center; }
+  .ring span small { display: block; font: 500 10.5px var(--mono); color: var(--muted); margin-top: 4px; letter-spacing: .06em; }
+  .ring.pending { background: conic-gradient(from -90deg, var(--amber) 0 30%, rgba(255,255,255,.06) 0); }
+  .edu-card h3 { font: 600 22px var(--display); letter-spacing: -.01em; margin: 0; }
+  .edu-card p { margin: 4px 0 0; color: var(--muted); font-size: 14.5px; }
+
+  /* Honours + skills */
+  .split { display: grid; grid-template-columns: 1fr 1.4fr; gap: 14px; }
+  .award { padding: 36px; display: flex; flex-direction: column; justify-content: space-between; gap: 26px; min-height: 100%; }
+  .medal { width: 92px; height: 92px; position: relative; }
+  .medal .disc { position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(circle at 32% 28%, #ffd9b0, #c27a3d 45%, #7a3f15 85%); box-shadow: 0 0 60px -6px rgba(251,191,36,.5), inset 0 -6px 12px rgba(0,0,0,.35); display: grid; place-items: center; font: 700 34px var(--display); color: #fff6ea; text-shadow: 0 1px 2px rgba(0,0,0,.4); }
+  .medal .disc::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(115deg, transparent 35%, rgba(255,255,255,.55) 50%, transparent 65%); background-size: 250% 100%; animation: shine 4s ease-in-out infinite; }
+  @keyframes shine { 0%, 60% { background-position: 150% 0; } 100% { background-position: -100% 0; } }
+  .award h3 { font: 600 26px/1.2 var(--display); letter-spacing: -.02em; margin: 0 0 10px; }
+  .award p { color: var(--muted); margin: 0; font-size: 15px; }
+  .skills { padding: 36px; }
+  .skill-group + .skill-group { margin-top: 26px; }
+  .skill-group .label { display: block; margin-bottom: 12px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { font-size: 13.5px; padding: 7px 13px; border-radius: 10px; background: rgba(255,255,255,.04); border: 1px solid var(--stroke); color: #d3d6dd; transition: border-color .2s, color .2s, transform .2s; }
+  .chip:hover { border-color: rgba(212,175,106,.5); color: var(--ink); transform: translateY(-1px); }
+  .chip.k { border-color: rgba(212,175,106,.25); background: rgba(212,175,106,.06); }
+
+  /* Contact */
+  .contact { position: relative; padding: 64px; border-radius: 32px; overflow: hidden; isolation: isolate; border: 1px solid var(--stroke-2);
+    background: radial-gradient(ellipse at 0% 0%, rgba(212,175,106,.22), transparent 55%), radial-gradient(ellipse at 100% 100%, rgba(70,100,150,.25), transparent 55%), #0a0e1a; }
+  .contact::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: .5;
+    background-image: radial-gradient(rgba(255,255,255,.12) 1px, transparent 1px); background-size: 22px 22px;
+    mask-image: radial-gradient(ellipse at 70% 30%, #000, transparent 70%); }
+  .contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: start; }
+  .contact h2 { font-size: clamp(38px, 5vw, 64px); margin: 18px 0 18px; }
+  .contact p.lead { color: #d3d6dd; font-size: 18px; margin: 0 0 24px; max-width: 520px; }
+  .c-links { display: grid; gap: 10px; }
+  .c-link { display: flex; align-items: center; gap: 14px; padding: 18px 20px; border-radius: 16px; background: rgba(255,255,255,.04); border: 1px solid var(--stroke); color: var(--ink); font-weight: 500; transition: background .25s, border-color .25s, transform .25s; overflow-wrap: anywhere; }
+  .c-link:hover { background: rgba(255,255,255,.08); border-color: var(--stroke-2); transform: translateX(4px); }
+  .c-link svg { width: 20px; height: 20px; flex: none; color: var(--cyan); }
+  .c-link .arrow { margin-left: auto; color: var(--dim); transition: color .2s, transform .2s; }
+  .c-link:hover .arrow { color: var(--ink); transform: translate(2px, -2px); }
+  .ref { margin-top: 28px; padding: 22px; border-radius: 16px; border: 1px dashed var(--stroke-2); }
+  .ref b { display: block; font: 600 17px var(--display); margin: 8px 0 4px; }
+  .ref p { margin: 0 0 8px; color: var(--muted); font-size: 14px; }
+
+
+  /* Contact */
+  .contact-layout { display: grid; grid-template-columns: 1.25fr 1fr; gap: 14px; align-items: start; }
+  .form { padding: 34px; }
+  .form-head { display: flex; gap: 14px; align-items: center; margin-bottom: 26px; }
+  .form-head h3 { font: 600 22px var(--display); margin: 0; letter-spacing: -.01em; }
+  .form-head p { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
+  .icon.sm { width: 42px; height: 42px; margin: 0; flex: none; }
+  .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .field { display: flex; flex-direction: column; gap: 7px; }
+  .field.full { grid-column: span 2; }
+  .field span { font: 500 11.5px var(--mono); color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+  .field input, .field select, .field textarea {
+    width: 100%; font: 15px var(--sans); color: var(--ink); background: rgba(255,255,255,.035);
+    border: 1px solid var(--stroke-2); border-radius: 12px; padding: 12px 14px; outline: none; transition: border-color .2s, box-shadow .2s, background .2s;
+  }
+  .field textarea { resize: vertical; min-height: 130px; }
+  .field select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23d4af6a' stroke-width='1.6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+  .field select option { background: #0b1020; }
+  .field input::placeholder, .field textarea::placeholder { color: var(--dim); }
+  .field input:focus, .field select:focus, .field textarea:focus { border-color: rgba(212,175,106,.6); box-shadow: 0 0 0 4px rgba(212,175,106,.12); background: rgba(255,255,255,.05); }
+  .field.err input, .field.err textarea { border-color: #e58b8b; }
+  .form-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 24px; }
+  .form-foot .btn { border: 0; cursor: pointer; }
+  .form-status { font: 500 13px var(--mono); color: var(--muted); }
+  .form-status.ok { color: #a7dcbf; } .form-status.bad { color: #e58b8b; }
+  .side { display: grid; gap: 14px; }
+  .card-pad { padding: 28px; }
+  .rows { display: grid; gap: 4px; margin-top: 14px; }
+  .row { display: flex; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--stroke); font-size: 15px; }
+  .row:last-child { border-bottom: 0; }
+  .row > div { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+  .row small { display: block; font: 500 11px var(--mono); color: var(--dim); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 2px; }
+  .row a { color: var(--ink); }
+  .row a:hover { color: var(--cyan); }
+  .r-ic { width: 38px; height: 38px; flex: none; border-radius: 11px; display: grid; place-items: center; color: var(--cyan); background: rgba(212,175,106,.08); border: 1px solid rgba(212,175,106,.2); }
+  .r-ic svg { width: 18px; height: 18px; }
+  .mini { flex: none; font: 500 12px var(--mono); color: var(--muted); background: transparent; border: 1px solid var(--stroke-2); border-radius: 8px; padding: 5px 10px; cursor: pointer; transition: color .2s, border-color .2s; }
+  .mini:hover { color: var(--ink); border-color: var(--cyan); }
+  .quick { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .quick .chip-btn { font-size: 12px; overflow-wrap: anywhere; }
+  .refp { display: flex; align-items: center; gap: 14px; margin: 16px 0 12px; }
+  .refp b { display: block; font: 600 17px var(--display); }
+  .refp small { color: var(--cyan); font-size: 13px; }
+  .avatar { width: 48px; height: 48px; flex: none; border-radius: 50%; display: grid; place-items: center; font: 600 13px var(--display); color: #0b0f1a; background: var(--grad); }
+  .ref-list { margin: 0; padding: 0; list-style: none; }
+  .ref-list li { position: relative; padding-left: 18px; color: #d3d6dd; font-size: 14.5px; margin-bottom: 6px; }
+  .ref-list li::before { content: ""; position: absolute; left: 0; top: 10px; width: 8px; height: 1.5px; background: var(--cyan); }
+  @media (max-width: 980px) { .contact-layout { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) { .fields { grid-template-columns: 1fr; } .field.full { grid-column: auto; } .form, .card-pad { padding: 24px 20px; } }
+
+  footer { padding: 70px 0 50px; color: var(--dim); font: 400 13px var(--mono); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+  /* Reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); transition-delay: var(--d, 0s); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* Toast */
+  .toast { position: fixed; bottom: 24px; left: 50%; transform: translate(-50%, 20px); opacity: 0; z-index: 80; padding: 12px 18px; border-radius: 12px; background: #111827; border: 1px solid var(--stroke-2); font: 500 13px var(--mono); transition: opacity .3s, transform .3s; pointer-events: none; }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  /* Responsive */
+  @media (max-width: 980px) {
+    .nav ul { display: none; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .bento .about, .bento .gcd, .bento .focus { grid-column: span 6; }
+    .feature-inner, .contact-grid, .split { grid-template-columns: 1fr; }
+    .pub-grid, .edu { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .wrap { padding: 0 16px; }
+    .nav { top: 10px; width: calc(100% - 20px); }
+    .nav-inner { padding: 8px 8px 8px 14px; }
+    .brand-name { display: none; }
+    .hero { padding: 110px 0 90px; }
+    .hero::after { background: linear-gradient(to bottom, rgba(7,10,18,.2), rgba(7,10,18,.6) 55%, transparent); }
+    .btn { padding: 12px 16px; font-size: 14px; }
+    .stats { gap: 10px; }
+    .stat { padding: 18px 16px; }
+    section.block { padding-top: 96px; }
+    .bento .about, .skills, .award { padding: 26px; }
+    .feature-inner { padding: 26px; }
+    .contact { padding: 34px 22px; border-radius: 24px; }
+    .t-item { padding: 22px 20px; }
+    .timeline { padding-left: 28px; }
+    .t-item .dot { left: -28px; }
+    .scroll-hint { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; }
+    h1.name .line span { transform: none; }
+  }
+  @media print {
+    .nav, .ambient, .gridbg, .grain, #lattice, .scroll-hint, .marquee, .progress, .cta, .links { display: none !important; }
+    body { background: #fff; color: #000; }
+    .glass, .feature-inner, .contact { background: #fff !important; border: 1px solid #ccc; backdrop-filter: none; }
+    .reveal { opacity: 1; transform: none; }
+    .grad-text { color: #000; background: none; }
+    .hero { min-height: auto; padding: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="ambient" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<div class="gridbg" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top"><span class="brand-mark">MR</span><span class="brand-name">Mahnoor Rashad</span></a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <canvas id="lattice" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <span class="status"><span class="live"></span>Open to PhD positions · Physics / Materials Science</span>
+      <h1 class="name">
+        <span class="line"><span>Mahnoor</span></span>
+        <span class="line"><span class="grad-text">Rashad</span></span>
+      </h1>
+      <p class="tagline">Physics researcher engineering nanomaterials for <span class="rot" id="rot">supercapacitors</span></p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:iammahnoorrashad@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          Email me
+        </a>
+        <a class="btn" href="Mahnoor-Rashad-CV.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M12 12v6m-3-3 3 3 3-3"/></svg>
+          Download CV
+        </a>
+        <a class="btn" href="#publications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>
+          Publications
+        </a>
+      </div>
+      <div class="profiles" data-profiles></div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"><span class="mouse"></span>Scroll</div>
+  </section>
+
+  <!-- STATS -->
+  <div class="wrap">
+    <div class="stats">
+      <div class="glass stat reveal" style="--c: var(--cyan)">
+        <div class="k">MPhil GPA</div>
+        <div class="v"><span data-count="3.88" data-dec="2">0</span><small>/4.0</small></div>
+        <div class="l">The University of Lahore</div>
+      </div>
+      <div class="glass stat reveal" style="--c: var(--violet); --d:.08s">
+        <div class="k">Publications</div>
+        <div class="v"><span data-count="1" data-dec="0">0</span><small>+1 in prep</small></div>
+        <div class="l">First-author paper in PCCP (RSC)</div>
+      </div>
+      <div class="glass stat reveal" style="--c: var(--amber); --d:.16s">
+        <div class="k">Honour</div>
+        <div class="v">Bronze</div>
+        <div class="l">Medal — 3rd position, MPhil Physics</div>
+      </div>
+      <div class="glass stat reveal" style="--c: var(--pink); --d:.24s">
+        <div class="k">Research experience</div>
+        <div class="v"><span data-count="2" data-dec="0">0</span>+<small>yrs</small></div>
+        <div class="l">Graduate researcher since Feb 2024</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Supercapacitors</span><span>Spinel Ferrites</span><span>NiSnFe₂O₄</span><span>Bi³⁺ Doping</span><span>Fe₂WO₆ Heterostructures</span><span>V₂O₅</span><span>g-C₃N₄</span><span>Co-precipitation</span><span>XRD · FTIR · SEM</span><span>EIS</span><span>Energy Storage</span>
+      <span>Supercapacitors</span><span>Spinel Ferrites</span><span>NiSnFe₂O₄</span><span>Bi³⁺ Doping</span><span>Fe₂WO₆ Heterostructures</span><span>V₂O₅</span><span>g-C₃N₄</span><span>Co-precipitation</span><span>XRD · FTIR · SEM</span><span>EIS</span><span>Energy Storage</span>
+    </div>
+  </div>
+
+  <!-- RESEARCH -->
+  <section class="block" id="research">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow"><b>01</b> Research focus</div>
+        <h2>Designing electrode materials <span class="grad-text">for energy storage.</span></h2>
+      </div>
+      <div class="bento">
+        <div class="glass about reveal">
+          <p>I work on the <strong>synthesis, characterization and performance optimization</strong> of metal-oxide heterostructures and nanocomposites for sustainable energy storage, with hands-on experience in co-precipitation synthesis and ion-doping strategies for ferrite materials.</p>
+          <p>I hold an <strong>MPhil and BS in Physics</strong> from The University of Lahore, have a <strong>first-author publication in <em>Physical Chemistry Chemical Physics</em></strong> with a second manuscript in preparation, and am seeking a PhD position to develop next-generation materials for supercapacitors, batteries and other electrochemical devices.</p>
+        </div>
+        <div class="glass gcd reveal" style="--d:.1s">
+          <div class="label">Charge – discharge · schematic</div>
+          <svg viewBox="0 0 240 110" aria-hidden="true">
+            <defs><linearGradient id="gcdGrad" x1="0" x2="1"><stop offset="0" stop-color="#f7e7c1"/><stop offset=".55" stop-color="#d4af6a"/><stop offset="1" stop-color="#a8803f"/></linearGradient></defs>
+            <line class="axis" x1="0" y1="100" x2="240" y2="100"/><line class="axis" x1="0" y1="0" x2="0" y2="100"/>
+            <path class="curve" d="M0 100 L 36 14 Q 40 10 44 16 L 78 98 Q 80 102 82 98 L 118 14 Q 122 10 126 16 L 160 98 Q 162 102 164 98 L 200 14 Q 204 10 208 16 L 240 92"/>
+          </svg>
+          <div><div class="big grad-text">87.4%</div><div class="label" style="margin-top:6px">cycling retention · Fe₂WO₆@V₂O₅</div></div>
+        </div>
+        <div class="glass focus reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="5" cy="5" r="1.8"/><circle cx="19" cy="5" r="1.8"/><circle cx="5" cy="19" r="1.8"/><circle cx="19" cy="19" r="1.8"/><path d="m6.5 6.5 3.7 3.7m3.6 0 3.7-3.7m-11 11 3.7-3.7m3.6 0 3.7 3.7"/></svg></div>
+          <h3>Nanomaterial synthesis</h3>
+          <p>Co-precipitation and hydrothermal routes to ferrite and metal-oxide nanoparticles with controlled composition.</p>
+        </div>
+        <div class="glass focus reveal" style="--d:.08s">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/><path d="M11 7h4a2 2 0 0 1 2 2v4"/></svg></div>
+          <h3>Heterostructures &amp; doping</h3>
+          <p>Ion doping and composite engineering (V₂O₅, g‑C₃N₄, Bi³⁺) to tune structure and charge storage.</p>
+        </div>
+        <div class="glass focus reveal" style="--d:.16s">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 11v2M11 9.5l-2 3h3l-2 3"/></svg></div>
+          <h3>Electrochemical storage</h3>
+          <p>Structural and electrochemical characterization of supercapacitor electrodes.</p>
+        </div>
+        <div class="glass interests reveal">
+          <div>
+            <div class="label">PhD interests</div>
+            <p>I want to carry this work into a PhD in Physics or Materials Science, focused on <strong>next-generation electrode materials</strong> and how composition, doping and interfaces control their electrochemical performance.</p>
+          </div>
+          <div class="chips">
+            <span class="chip k">Supercapacitors</span><span class="chip k">Batteries</span><span class="chip k">Other electrochemical energy devices</span><span class="chip k">Doped &amp; heterostructured metal oxides</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section class="block" id="publications">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow"><b>02</b> Publications &amp; presentations</div>
+        <h2>Research <span class="grad-text">output.</span></h2>
+      </div>
+
+      <article class="feature reveal">
+        <div class="feature-inner">
+          <div>
+            <div class="badges"><span class="badge ok">● Published</span><span class="badge v">First author</span><span class="badge c">RSC · 2026</span></div>
+            <h3>Engineering Fe₂WO₆-based heterostructures for high-performance supercapacitors: the role of V₂O₅ and g-C₃N₄ integration</h3>
+            <p class="authors"><b>M. Rashad</b>, A. Almohammedi, M. I. Khan, A. Mujtaba, M. Ahmad, F. M. Alzahrani, U. Younas, A. Saleem, M. Iqbal, G. Ul Islam</p>
+            <p class="journal"><em>Physical Chemistry Chemical Physics</em> 28(28), 17417–17428 (2026)</p>
+            <div class="links">
+              <a class="chip-btn" href="https://doi.org/10.1039/d6cp01274d" target="_blank" rel="noopener">DOI 10.1039/d6cp01274d ↗</a>
+              <a class="chip-btn" href="https://pubmed.ncbi.nlm.nih.gov/42390250/" target="_blank" rel="noopener">PubMed ↗</a>
+              <button class="chip-btn" type="button" data-copy="bib1">Copy BibTeX</button>
+            </div>
+            <details class="abstract">
+              <summary>Summary of the study</summary>
+              <p>Fe₂WO₆ nanoparticles were prepared hydrothermally, and Fe₂WO₆@V₂O₅ and Fe₂WO₆@g-C₃N₄ heterostructures were then built by in situ deposition. XRD and FTIR confirmed crystalline heterostructures with strong interfacial coupling, and SEM showed porous, interconnected morphologies suited to electrolyte access. BET analysis gave Fe₂WO₆@V₂O₅ the larger surface area (38.7 m² g⁻¹) and pore diameter (13.6 nm). UV–Vis showed narrowed band gaps of 2.59 eV (V₂O₅) and 2.71 eV (g-C₃N₄), indicating improved conductivity. Electrochemically, V₂O₅ integration outperformed g-C₃N₄, making Fe₂WO₆@V₂O₅ the stronger candidate electrode for next-generation supercapacitors.</p>
+            </details>
+            <template id="bib1">@article{Rashad2026Fe2WO6,
+  author  = {Rashad, Mahnoor and Almohammedi, A. and Khan, M. I. and Mujtaba, A. and Ahmad, M. and Alzahrani, F. M. and Younas, U. and Saleem, A. and Iqbal, M. and Ul Islam, G.},
+  title   = {Engineering Fe2WO6-based heterostructures for high-performance supercapacitors: the role of V2O5 and g-C3N4 integration},
+  journal = {Physical Chemistry Chemical Physics},
+  volume  = {28},
+  number  = {28},
+  pages   = {17417--17428},
+  year    = {2026},
+  doi     = {10.1039/d6cp01274d}
+}</template>
+          </div>
+          <div class="metrics">
+            <div class="metric hl"><div class="v grad-text">355.3<small>F g⁻¹</small></div><div class="l">Specific capacitance at 0.8 A g⁻¹ (Fe₂WO₆@V₂O₅)</div></div>
+            <div class="metric"><div class="v">2.67<small>Ω</small></div><div class="l">Charge-transfer resistance</div></div>
+            <div class="metric"><div class="v">87.4<small>%</small></div><div class="l">Cycling stability</div></div>
+            <div class="metric"><div class="v">38.7<small>m² g⁻¹</small></div><div class="l">BET surface area</div></div>
+            <div class="metric"><div class="v">2.59<small>eV</small></div><div class="l">Reduced band gap</div></div>
+          </div>
+        </div>
+      </article>
+
+      <div class="pub-grid">
+        <article class="glass pub-card reveal">
+          <div class="badges"><span class="badge wip">◐ Manuscript in preparation</span><span class="yr">2026</span></div>
+          <h3>Modified structure of nickel tin ferrite by bismuth doping for high-performance supercapacitor</h3>
+          <p><b style="color:var(--ink)">Mahnoor Rashad</b> · MPhil thesis research</p>
+        </article>
+        <article class="glass pub-card reveal" style="--d:.08s">
+          <div class="badges"><span class="badge c">◆ Conference presentation · upcoming</span><span class="yr">8–9 Oct 2026</span></div>
+          <h3>Structural modification of nickel tin ferrites via bismuth doping for supercapacitors</h3>
+          <p>International Conference on Emerging Trends in Physics (ICETP) · The University of Lahore</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="block" id="experience">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow"><b>03</b> Experience</div>
+        <h2>Research, projects <span class="grad-text">&amp; teaching.</span></h2>
+      </div>
+      <div class="timeline" id="timeline">
+        <div class="fill" id="tlFill"></div>
+        <div class="glass t-item reveal" style="--c: var(--cyan)">
+          <span class="dot"></span>
+          <span class="kind">Research</span>
+          <div class="t-top"><h3>Graduate Researcher</h3><span class="when">Feb 2024 — Present</span></div>
+          <div class="where">Department of Physics · The University of Lahore, Pakistan · Supervisor: Prof. Dr. M. Iftikhar Khan</div>
+          <ul>
+            <li><b>MPhil thesis:</b> synthesized pure <span class="chem">NiSnFe₂O₄</span> nanoparticles by co-precipitation and studied how Bi-ion doping at varying concentrations affects capacitance and energy-storage performance, using structural and electrochemical characterization. Manuscript in preparation; to be presented at ICETP.</li>
+            <li><b>Fe₂WO₆ heterostructures:</b> first author of the study comparing V₂O₅ and g-C₃N₄ integration in Fe₂WO₆ electrodes, published in <em>Physical Chemistry Chemical Physics</em> (2026).</li>
+          </ul>
+        </div>
+        <div class="glass t-item reveal" style="--c: var(--violet)">
+          <span class="dot"></span>
+          <span class="kind">Project</span>
+          <div class="t-top"><h3>Anti-Sleep Glasses</h3><span class="when">Nov 2023 — Jan 2024</span></div>
+          <div class="where">BS final-year project · The University of Lahore</div>
+          <ul><li>Built a wearable alarm that detects early signs of driver drowsiness and alerts the driver in real time.</li></ul>
+        </div>
+        <div class="glass t-item reveal" style="--c: var(--pink)">
+          <span class="dot"></span>
+          <span class="kind">Teaching</span>
+          <div class="t-top"><h3>Science Teacher</h3><span class="when">Mar 2024 — Mar 2025</span></div>
+          <div class="where">KIPS School · Lahore, Pakistan</div>
+          <ul><li>Taught Physics and Science at secondary level.</li></ul>
+        </div>
+        <div class="glass t-item reveal" style="--c: var(--pink)">
+          <span class="dot"></span>
+          <span class="kind">Teaching</span>
+          <div class="t-top"><h3>Private Tutor</h3><span class="when">Jan 2021 — Present</span></div>
+          <div class="where" style="margin-bottom:0">Cambridge O Level / IGCSE Physics &amp; Mathematics</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="block" id="education">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow"><b>04</b> Education</div>
+        <h2>Academic <span class="grad-text">training.</span></h2>
+      </div>
+      <div class="edu">
+        <div class="glass edu-card reveal">
+          <div class="ring" data-ring="97"><span>3.88<small>/ 4.0 GPA</small></span></div>
+          <div>
+            <span class="when">Feb 2024 — Dec 2025</span>
+            <h3 style="margin-top:6px">MPhil Physics</h3>
+            <p>The University of Lahore, Pakistan</p>
+            <p style="color:#e2c285">Bronze Medal · 3rd position</p>
+          </div>
+        </div>
+        <div class="glass edu-card reveal" style="--d:.08s">
+          <div class="ring" data-ring="93"><span>3.72<small>/ 4.0 GPA</small></span></div>
+          <div>
+            <span class="when">Sep 2021 — Jan 2024</span>
+            <h3 style="margin-top:6px">BS Physics</h3>
+            <p>The University of Lahore, Pakistan</p>
+          </div>
+        </div>
+        <div class="glass edu-card reveal" style="--d:.16s">
+          <div class="ring pending"><span style="font-size:15px">In<small>progress</small></span></div>
+          <div>
+            <span class="when">Apr 2025 — Present</span>
+            <h3 style="margin-top:6px">B.Ed. (Secondary)</h3>
+            <p>Virtual University of Pakistan, Lahore</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HONOURS & SKILLS -->
+  <section class="block" id="skills">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow"><b>05</b> Honours &amp; skills</div>
+        <h2>Recognition &amp; <span class="grad-text">toolkit.</span></h2>
+      </div>
+      <div class="split">
+        <div class="glass award reveal">
+          <div class="medal"><div class="disc">3</div></div>
+          <div>
+            <span class="when">May 2026</span>
+            <h3 style="margin-top:8px">Bronze Medal — MPhil Physics</h3>
+            <p>Awarded by The University of Lahore for third position in the MPhil Physics program, based on academic performance and research accomplishments.</p>
+          </div>
+        </div>
+        <div class="glass skills reveal" style="--d:.08s">
+          <div class="skill-group">
+            <span class="label">Synthesis &amp; materials</span>
+            <div class="chips">
+              <span class="chip k">Co-precipitation</span><span class="chip k">Hydrothermal &amp; in situ deposition</span><span class="chip k">Sol-gel &amp; chemical bath (basics)</span><span class="chip k">Metal-oxide heterostructures</span><span class="chip k">Nanocomposites</span><span class="chip k">Ion doping &amp; structural modification</span><span class="chip k">Materials chemistry &amp; electrochemistry</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="label">Characterization used in my research</span>
+            <div class="chips">
+              <span class="chip k">XRD</span><span class="chip k">FTIR</span><span class="chip k">SEM</span><span class="chip k">BET surface area</span><span class="chip k">UV–Vis</span><span class="chip k">Galvanostatic charge–discharge</span><span class="chip k">EIS</span><span class="chip k">Physics lab techniques</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="label">Analysis &amp; communication</span>
+            <div class="chips">
+              <span class="chip">OriginLab</span><span class="chip">Data analysis</span><span class="chip">Scientific writing</span><span class="chip">Academic presentation</span><span class="chip">Teaching &amp; lab demonstration</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="label">Languages</span>
+            <div class="chips"><span class="chip">Urdu — native</span><span class="chip">English — C1 reading &amp; listening · B2 writing &amp; speaking</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="block" id="contact">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow"><b>06</b> Contact</div>
+        <h2>Get in touch <span class="grad-text">&amp; collaborate.</span></h2>
+        <p>Open to PhD positions, research collaboration and academic enquiries in electrochemical energy storage and nanomaterials.</p>
+      </div>
+
+      <div class="contact-layout">
+        <!-- Message form -->
+        <form class="glass form reveal" id="contactForm" novalidate>
+          <div class="form-head">
+            <span class="icon sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg></span>
+            <div><h3>Send a message</h3><p>I usually reply by email.</p></div>
+          </div>
+          <div class="fields">
+            <label class="field"><span>Your name *</span><input name="name" required autocomplete="name" placeholder="Prof. / Dr. / Researcher name"></label>
+            <label class="field"><span>Your email *</span><input name="email" type="email" required autocomplete="email" placeholder="you@institution.edu"></label>
+            <label class="field"><span>Institution / lab</span><input name="institution" autocomplete="organization" placeholder="University, department or group"></label>
+            <label class="field"><span>Enquiry type</span>
+              <select name="category">
+                <option>PhD opportunity</option>
+                <option>Research collaboration</option>
+                <option>Academic query</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label class="field full"><span>Subject</span><input name="subject" placeholder="e.g. Funded PhD position in energy-storage materials"></label>
+            <label class="field full"><span>Message *</span><textarea name="message" rows="5" required placeholder="Research scope, position details, timeline…"></textarea></label>
+          </div>
+          <div class="form-foot">
+            <button class="btn primary" type="submit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
+              Send message
+            </button>
+            <span class="form-status" id="formStatus" role="status"></span>
+          </div>
+        </form>
+
+        <div class="side">
+          <!-- Direct contact -->
+          <div class="glass card-pad reveal" style="--d:.08s">
+            <span class="label">Direct contact</span>
+            <div class="rows">
+              <div class="row">
+                <span class="r-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+                <div><small>Email</small><a href="mailto:iammahnoorrashad@gmail.com">iammahnoorrashad@gmail.com</a></div>
+                <button class="mini" type="button" data-copytext="iammahnoorrashad@gmail.com" aria-label="Copy email">Copy</button>
+              </div>
+              <div class="row">
+                <span class="r-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+                <div><small>Phone / WhatsApp</small><a id="phoneLink" href="#">+971 50 226 0597</a></div>
+                <a class="mini" id="waLink" href="#" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+              <div class="row">
+                <span class="r-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                <div><small>Based in</small>Dubai, United Arab Emirates</div>
+              </div>
+            </div>
+            <div class="quick">
+              <a class="chip-btn" href="https://orcid.org/0009-0004-1528-5923" target="_blank" rel="noopener">ORCID ↗</a>
+              <a class="chip-btn" href="https://www.linkedin.com/in/mahnoorrashad" target="_blank" rel="noopener">LinkedIn ↗</a>
+              <a class="chip-btn" href="Mahnoor-Rashad-CV.pdf" target="_blank" rel="noopener">CV (PDF) ↗</a>
+            </div>
+          </div>
+
+          <!-- Reference -->
+          <div class="glass card-pad reveal" style="--d:.16s">
+            <span class="label">Academic reference</span>
+            <div class="refp">
+              <span class="avatar">MIK</span>
+              <div>
+                <b>Prof. Dr. Muhammad Iftikhar Khan</b>
+                <small>MPhil thesis supervisor</small>
+              </div>
+            </div>
+            <ul class="ref-list">
+              <li>Head of Department, Department of Physics, The University of Lahore, Pakistan</li>
+              <li>Professor, Islamic University of Madinah, Saudi Arabia</li>
+            </ul>
+            <div class="quick">
+              <a class="chip-btn" href="mailto:muhammad.iftikhar@phys.uol.edu.pk">muhammad.iftikhar@phys.uol.edu.pk</a>
+              <a class="chip-btn" href="https://faculty.uol.edu.pk/Faculty/7218/Muhammad%20Iftikhar" target="_blank" rel="noopener">Faculty profile ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <footer><span>© <span id="yr">2026</span> Mahnoor Rashad</span><span>Dubai, United Arab Emirates</span></footer>
+  </div>
+</main>
+
+<div class="toast" id="toast">BibTeX copied ✓</div>
+
+<script>
+  /* ===== Research profiles — paste IDs here; empty ones stay hidden ===== */
+  var PROFILES = {
+    orcid:        '0009-0004-1528-5923',
+    scholar:      '',  // Google Scholar user id, e.g. 'AbCdEfGAAAAJ' (from ...citations?user=XXXX)
+    researchgate: '',  // e.g. 'Mahnoor-Rashad'  (from researchgate.net/profile/XXXX)
+    scopus:       '',  // Scopus author id, e.g. '57212345678'
+    wos:          ''   // Web of Science ResearcherID, e.g. 'ABC-1234-2026'
+  };
+  /* ===================================================================== */
+
+  (function () {
+    var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* Profiles */
+    var defs = [
+      ['orcid', '#a6ce39', 'iD', function (v) { return 'https://orcid.org/' + v; }, function (v) { return 'ORCID ' + v; }],
+      ['scholar', '#4285f4', 'G', function (v) { return 'https://scholar.google.com/citations?user=' + v; }, function () { return 'Google Scholar'; }],
+      ['researchgate', '#00ccbb', 'RG', function (v) { return 'https://www.researchgate.net/profile/' + v; }, function () { return 'ResearchGate'; }],
+      ['scopus', '#e9711c', 'Sc', function (v) { return 'https://www.scopus.com/authid/detail.uri?authorId=' + v; }, function () { return 'Scopus'; }],
+      ['wos', '#5e33bf', 'WoS', function (v) { return 'https://www.webofscience.com/wos/author/record/' + v; }, function () { return 'Web of Science'; }]
+    ];
+    document.querySelectorAll('[data-profiles]').forEach(function (box) {
+      defs.forEach(function (d) {
+        var v = (PROFILES[d[0]] || '').trim(); if (!v) return;
+        var a = document.createElement('a');
+        a.className = 'profile'; a.href = d[3](v); a.target = '_blank'; a.rel = 'noopener';
+        a.innerHTML = '<i style="background:' + d[1] + '">' + d[2] + '</i>';
+        a.appendChild(document.createTextNode(d[4](v)));
+        box.appendChild(a);
+      });
+      if (!box.children.length) box.remove();
+    });
+
+    /* BibTeX copy */
+    var toast = document.getElementById('toast');
+    document.querySelectorAll('[data-copy]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var text = document.getElementById(btn.dataset.copy).innerHTML.replace(/&amp;/g, '&');
+        navigator.clipboard.writeText(text).then(function () {
+          toast.classList.add('show'); setTimeout(function () { toast.classList.remove('show'); }, 1800);
+        });
+      });
+    });
+
+    /* Rotating tagline words */
+    var words = ['supercapacitors', 'sustainable energy storage', 'spinel ferrite electrodes', 'metal-oxide heterostructures'];
+    var rot = document.getElementById('rot');
+    if (!reduce) {
+      var wi = 0, ci = words[0].length, del = true;
+      setTimeout(function tick() {
+        if (del) { ci--; if (ci === 0) { del = false; wi = (wi + 1) % words.length; } }
+        else { ci++; if (ci === words[wi].length) { del = true; rot.textContent = words[wi]; return setTimeout(tick, 2200); } }
+        rot.textContent = words[wi].slice(0, ci) || '​';
+        setTimeout(tick, del ? 35 : 70);
+      }, 2600);
+    }
+
+    /* Nav state + scroll progress + timeline fill */
+    var nav = document.getElementById('nav'), prog = document.getElementById('progress');
+    var tl = document.getElementById('timeline'), fill = document.getElementById('tlFill');
+    function onScroll() {
+      var y = scrollY, h = document.documentElement.scrollHeight - innerHeight;
+      nav.classList.toggle('scrolled', y > 40);
+      prog.style.transform = 'scaleX(' + (h > 0 ? y / h : 0) + ')';
+      var r = tl.getBoundingClientRect(), total = tl.offsetHeight - 16;
+      var p = Math.min(Math.max((innerHeight * 0.6 - r.top) / total, 0), 1);
+      fill.style.height = (p * total) + 'px';
+    }
+    addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+    /* Active nav link */
+    var links = [].slice.call(document.querySelectorAll('.nav ul a'));
+    var secObs = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) links.forEach(function (l) { l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id); });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('section[id]').forEach(function (s) { secObs.observe(s); });
+
+    /* Counters */
+    function count(el) {
+      var to = parseFloat(el.dataset.count), dec = +el.dataset.dec, t0 = performance.now(), dur = 1600;
+      if (reduce) { el.textContent = to.toFixed(dec); return; }
+      (function f(t) {
+        var p = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - p, 4);
+        el.textContent = (to * e).toFixed(dec);
+        if (p < 1) requestAnimationFrame(f);
+      })(t0);
+    }
+    /* Reveal + counters + rings */
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        e.target.querySelectorAll('[data-count]').forEach(count);
+        e.target.querySelectorAll('[data-ring]').forEach(function (r) {
+          var to = +r.dataset.ring, t0 = performance.now();
+          (function f(t) { var p = Math.min((t - t0) / 1400, 1); r.style.setProperty('--p', (to * (1 - Math.pow(1 - p, 3))).toFixed(1)); if (p < 1) requestAnimationFrame(f); })(t0);
+        });
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+    /* Cursor spotlight on glass cards */
+    document.querySelectorAll('.glass').forEach(function (c) {
+      c.addEventListener('pointermove', function (e) {
+        var r = c.getBoundingClientRect();
+        c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        c.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
+
+
+    /* ===== Contact form =====
+       Without a form service it opens the visitor's email app with the message pre-filled.
+       To receive messages directly, create a free form at formspree.io and paste its URL here. */
+    var FORM_ENDPOINT = '';  // e.g. 'https://formspree.io/f/xxxxxxx'
+    var form = document.getElementById('contactForm'), status = document.getElementById('formStatus');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var ok = true;
+      form.querySelectorAll('[required]').forEach(function (f) {
+        var bad = !f.value.trim() || (f.type === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.value));
+        f.closest('.field').classList.toggle('err', bad); if (bad) ok = false;
+      });
+      if (!ok) { status.className = 'form-status bad'; status.textContent = 'Please fill in the required fields.'; return; }
+      var d = Object.fromEntries(new FormData(form));
+      if (FORM_ENDPOINT) {
+        status.className = 'form-status'; status.textContent = 'Sending…';
+        fetch(FORM_ENDPOINT, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) })
+          .then(function (r) { if (!r.ok) throw 0; form.reset(); status.className = 'form-status ok'; status.textContent = 'Thank you — your message was sent.'; })
+          .catch(function () { status.className = 'form-status bad'; status.textContent = 'Could not send. Please email directly.'; });
+      } else {
+        var subj = '[' + d.category + '] ' + (d.subject || 'Enquiry from ' + d.name);
+        var body = d.message + '\n\n— ' + d.name + (d.institution ? ', ' + d.institution : '') + '\n' + d.email;
+        location.href = 'mailto:iammahnoorrashad@gmail.com?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
+        status.className = 'form-status ok'; status.textContent = 'Opening your email app…';
+      }
+    });
+
+    /* Phone assembled in script to reduce scraping by spam bots */
+    var ph = ['971', '50', '226', '0597'];
+    document.getElementById('phoneLink').href = 'tel:+' + ph.join('');
+    document.getElementById('waLink').href = 'https://wa.me/' + ph.join('');
+
+    document.querySelectorAll('[data-copytext]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        navigator.clipboard.writeText(b.dataset.copytext).then(function () { var t = b.textContent; b.textContent = 'Copied'; setTimeout(function () { b.textContent = t; }, 1500); });
+      });
+    });
+
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    /* ===== Hero: rotating 3D spinel-like crystal lattice with drifting ions ===== */
+    var cv = document.getElementById('lattice'), ctx = cv.getContext('2d');
+    var W, H, DPR, nodes = [], edges = [], ions = [], mouse = { x: 0, y: 0 }, rx = -0.5, ry = 0.6, running = true;
+    var N = 3, S = 1;
+    // FCC-ish lattice: cube corners + face centres across an N×N×N block
+    var seen = {};
+    function add(x, y, z, type) {
+      var k = x.toFixed(2) + ',' + y.toFixed(2) + ',' + z.toFixed(2);
+      if (seen[k] !== undefined) return seen[k];
+      nodes.push({ x: x, y: y, z: z, t: type }); return (seen[k] = nodes.length - 1);
+    }
+    for (var i = 0; i <= N; i++) for (var j = 0; j <= N; j++) for (var k = 0; k <= N; k++) add(i, j, k, 0);
+    for (i = 0; i < N; i++) for (j = 0; j < N; j++) for (k = 0; k < N; k++) {
+      add(i + .5, j + .5, k, 1); add(i + .5, j, k + .5, 1); add(i, j + .5, k + .5, 1);
+      add(i + .5, j + .5, k + 1, 1); add(i + .5, j + 1, k + .5, 1); add(i + 1, j + .5, k + .5, 1);
+      if ((i + j + k) % 2 === 0) add(i + .5, j + .5, k + .5, 2); // interstitial dopant sites
+    }
+    nodes.forEach(function (n) { n.x -= N / 2; n.y -= N / 2; n.z -= N / 2; });
+    for (i = 0; i < nodes.length; i++) for (j = i + 1; j < nodes.length; j++) {
+      var a = nodes[i], b = nodes[j], d = Math.hypot(a.x - b.x, a.y - b.y, a.z - b.z);
+      if (d < 0.72 && !(a.t === 2 && b.t === 2)) edges.push([i, j, d]);
+    }
+    for (i = 0; i < 70; i++) ions.push({ x: (Math.random() - .5) * 5, y: (Math.random() - .5) * 5, z: (Math.random() - .5) * 5, v: .004 + Math.random() * .01, p: Math.random() * 6.28 });
+
+    function resize() {
+      DPR = Math.min(devicePixelRatio || 1, 2);
+      W = cv.clientWidth; H = cv.clientHeight;
+      cv.width = W * DPR; cv.height = H * DPR; ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    }
+    addEventListener('resize', resize); resize();
+    addEventListener('pointermove', function (e) { mouse.x = e.clientX / innerWidth - .5; mouse.y = e.clientY / innerHeight - .5; });
+    new IntersectionObserver(function (es) {
+      var was = running; running = es[0].isIntersecting;
+      if (running && !was) requestAnimationFrame(frame);
+    }).observe(cv);
+
+    var COLORS = ['212,175,106', '220,226,236', '247,231,193'];
+    function project(p, cx, cy, sc, cosY, sinY, cosX, sinX) {
+      var x = p.x * cosY - p.z * sinY, z = p.x * sinY + p.z * cosY;
+      var y = p.y * cosX - z * sinX; z = p.y * sinX + z * cosX;
+      var f = 6 / (6 + z);
+      return { x: cx + x * sc * f, y: cy + y * sc * f, z: z, f: f };
+    }
+    var last = 0;
+    function frame(t) {
+      if (!running) return;
+      var dt = Math.min((t - last) / 16.7, 3) || 1; last = t;
+      if (!reduce) { ry += 0.0022 * dt; }
+      var trx = rx + mouse.y * 0.5, try_ = ry + mouse.x * 0.8;
+      var cosY = Math.cos(try_), sinY = Math.sin(try_), cosX = Math.cos(trx), sinX = Math.sin(trx);
+      var mobile = W < 700;
+      var cx = mobile ? W * .5 : W * .7, cy = H * (mobile ? .38 : .5), sc = Math.min(W, H) * (mobile ? .2 : .19);
+      ctx.clearRect(0, 0, W, H);
+      var P = nodes.map(function (n) { return project(n, cx, cy, sc, cosY, sinY, cosX, sinX); });
+      ctx.lineWidth = 1;
+      edges.forEach(function (e) {
+        var a = P[e[0]], b = P[e[1]], depth = (a.f + b.f) / 2;
+        ctx.strokeStyle = 'rgba(212,175,106,' + (0.05 + (depth - .7) * .45).toFixed(3) + ')';
+        ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+      });
+      var order = P.map(function (p, i) { return i; }).sort(function (a, b) { return P[b].z - P[a].z; });
+      order.forEach(function (i) {
+        var p = P[i], n = nodes[i], c = COLORS[n.t], r = (n.t === 0 ? 3.2 : n.t === 1 ? 2.4 : 3.8) * p.f;
+        var pulse = n.t === 2 ? (0.6 + 0.4 * Math.sin(t / 500 + i)) : 1;
+        var g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, r * 5);
+        g.addColorStop(0, 'rgba(' + c + ',' + (0.35 * p.f * pulse).toFixed(3) + ')'); g.addColorStop(1, 'rgba(' + c + ',0)');
+        ctx.fillStyle = g; ctx.beginPath(); ctx.arc(p.x, p.y, r * 5, 0, 6.283); ctx.fill();
+        ctx.fillStyle = 'rgba(' + c + ',' + Math.min(1, .45 + (p.f - .7) * 1.6).toFixed(3) + ')';
+        ctx.beginPath(); ctx.arc(p.x, p.y, r, 0, 6.283); ctx.fill();
+      });
+      ions.forEach(function (o) {
+        if (!reduce) { o.y -= o.v * dt; o.x += Math.sin(t / 900 + o.p) * .002 * dt; if (o.y < -2.6) { o.y = 2.6; o.x = (Math.random() - .5) * 5; } }
+        var p = project(o, cx, cy, sc, cosY, sinY, cosX, sinX);
+        ctx.fillStyle = 'rgba(247,231,193,' + (0.25 + (p.f - .7) * .9).toFixed(3) + ')';
+        ctx.beginPath(); ctx.arc(p.x, p.y, 1.4 * p.f, 0, 6.283); ctx.fill();
+      });
+      if (!reduce) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  })();
+</script>
+</body>
+</html>
