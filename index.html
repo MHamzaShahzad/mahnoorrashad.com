@@ -266,11 +266,10 @@
 
   /* Research bento */
   .bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
-  .bento .about { grid-column: span 4; padding: 36px; }
-  .bento .about p { font-size: 18px; line-height: 1.7; color: var(--text); margin: 0 0 16px; }
+  .bento .about { grid-column: span 6; padding: 36px 40px; }
+  .bento .about p { font-size: 18px; line-height: 1.7; color: var(--text); margin: 0 0 16px; max-width: 900px; }
   .bento .about p:last-child { margin: 0; }
   .bento .about strong { color: var(--ink); font-weight: 600; }
-  .bento .gcd { grid-column: span 2; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; }
   .bento .focus { grid-column: span 2; padding: 28px; }
   .bento .interests { grid-column: span 6; padding: 30px 36px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; }
   .interests p { margin: 10px 0 0; font-size: 17px; color: var(--text); }
@@ -282,12 +281,6 @@
   .focus h3 { font: 600 20px var(--display); letter-spacing: -.01em; margin: 0 0 8px; }
   .focus p { margin: 0; color: var(--muted); font-size: 15px; }
   .label { font: 500 11px var(--mono); color: var(--dim); text-transform: uppercase; letter-spacing: .14em; }
-  .gcd svg { width: 100%; height: auto; overflow: visible; }
-  .gcd .curve { fill: none; stroke: url(#gcdGrad); stroke-width: 2.5; stroke-linejoin: round; stroke-dasharray: 900; stroke-dashoffset: 900; }
-  .gcd.in .curve { animation: draw 3s ease-out forwards; }
-  @keyframes draw { to { stroke-dashoffset: 0; } }
-  .gcd .axis { stroke: var(--stroke-2); stroke-width: 1; }
-  .gcd .big { font: 600 34px/1 var(--display); letter-spacing: -.03em; }
 
   /* Publications */
   .feature { padding: 2px; border-radius: 26px; position: relative; overflow: hidden; isolation: isolate; }
@@ -530,7 +523,7 @@
   @media (max-width: 980px) {
     .nav ul { display: none; }
     .stats { grid-template-columns: 1fr 1fr; }
-    .bento .about, .bento .gcd, .bento .focus { grid-column: span 6; }
+    .bento .about, .bento .focus { grid-column: span 6; }
     .feature-inner, .contact-grid, .split { grid-template-columns: 1fr; }
     .pub-grid, .edu { grid-template-columns: 1fr; }
   }
@@ -681,15 +674,6 @@
         <div class="glass about reveal">
           <p>I work on the <strong>synthesis, characterization and performance optimization</strong> of metal-oxide heterostructures and nanocomposites for sustainable energy storage, with hands-on experience in co-precipitation synthesis and ion-doping strategies for ferrite materials.</p>
           <p>I hold an <strong>MPhil and BS in Physics</strong> from The University of Lahore, have a <strong>first-author publication in <em>Physical Chemistry Chemical Physics</em></strong> with a second manuscript in preparation, and am seeking a PhD position to develop next-generation materials for supercapacitors, batteries and other electrochemical devices.</p>
-        </div>
-        <div class="glass gcd reveal" style="--d:.1s">
-          <div class="label">Charge – discharge · schematic</div>
-          <svg viewBox="0 0 240 110" aria-hidden="true">
-            <defs><linearGradient id="gcdGrad" x1="0" x2="1"><stop offset="0" stop-color="#f7e7c1"/><stop offset=".55" stop-color="#d4af6a"/><stop offset="1" stop-color="#a8803f"/></linearGradient></defs>
-            <line class="axis" x1="0" y1="100" x2="240" y2="100"/><line class="axis" x1="0" y1="0" x2="0" y2="100"/>
-            <path class="curve" d="M0 100 L 36 14 Q 40 10 44 16 L 78 98 Q 80 102 82 98 L 118 14 Q 122 10 126 16 L 160 98 Q 162 102 164 98 L 200 14 Q 204 10 208 16 L 240 92"/>
-          </svg>
-          <div><div class="big grad-text">87.4%</div><div class="label" style="margin-top:6px">cycling retention · Fe₂WO₆@V₂O₅</div></div>
         </div>
         <div class="glass focus reveal">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><circle cx="5" cy="5" r="1.8"/><circle cx="19" cy="5" r="1.8"/><circle cx="5" cy="19" r="1.8"/><circle cx="19" cy="19" r="1.8"/><path d="m6.5 6.5 3.7 3.7m3.6 0 3.7-3.7m-11 11 3.7-3.7m3.6 0 3.7 3.7"/></svg></div>
