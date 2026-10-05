@@ -290,7 +290,7 @@
     animation: spin 6s linear infinite;
   }
   @keyframes spin { to { transform: rotate(1turn); } }
-  .feature-inner { border-radius: 24px; background: var(--feature-bg); padding: 40px; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; }
+  .feature-inner { border-radius: 24px; background: var(--feature-bg); padding: 40px; display: grid; grid-template-columns: 1fr; gap: 0; }
   .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
   .badge { font: 500 11.5px var(--mono); letter-spacing: .04em; padding: 5px 11px; border-radius: 999px; border: 1px solid; }
   .badge.ok { color: #a7dcbf; border-color: rgba(167,220,191,.28); background: rgba(127,209,164,.07); }
@@ -302,6 +302,9 @@
   .authors b { color: var(--ink); }
   .journal { font-size: 15px; color: var(--text); margin: 0; }
   .journal em { color: var(--ink); }
+  .study { display: grid; grid-template-columns: 1.15fr 1fr; gap: 36px; margin-top: 28px; padding-top: 26px; border-top: 1px solid var(--stroke); }
+  .study .label { display: block; margin-bottom: 12px; color: var(--cyan); }
+  .study-text p { margin: 0; color: var(--text); font-size: 15.5px; line-height: 1.75; }
   .metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-content: start; }
   .metric { padding: 18px; border-radius: 16px; background: rgba(var(--tint),.03); border: 1px solid var(--stroke); }
   .metric .v { font: 600 28px/1 var(--display); letter-spacing: -.02em; }
@@ -524,7 +527,7 @@
     .nav ul { display: none; }
     .stats { grid-template-columns: 1fr 1fr; }
     .bento .about, .bento .focus { grid-column: span 6; }
-    .feature-inner, .contact-grid, .split { grid-template-columns: 1fr; }
+    .feature-inner, .contact-grid, .split, .study { grid-template-columns: 1fr; }
     .pub-grid, .edu { grid-template-columns: 1fr; }
   }
   @media (max-width: 600px) {
@@ -723,10 +726,6 @@
               <a class="chip-btn" href="https://pubmed.ncbi.nlm.nih.gov/42390250/" target="_blank" rel="noopener">PubMed ↗</a>
               <button class="chip-btn" type="button" data-copy="bib1">Copy BibTeX</button>
             </div>
-            <details class="abstract">
-              <summary>Summary of the study</summary>
-              <p>Fe₂WO₆ nanoparticles were prepared hydrothermally, and Fe₂WO₆@V₂O₅ and Fe₂WO₆@g-C₃N₄ heterostructures were then built by in situ deposition. XRD and FTIR confirmed crystalline heterostructures with strong interfacial coupling, and SEM showed porous, interconnected morphologies suited to electrolyte access. BET analysis gave Fe₂WO₆@V₂O₅ the larger surface area (38.7 m² g⁻¹) and pore diameter (13.6 nm). UV–Vis showed narrowed band gaps of 2.59 eV (V₂O₅) and 2.71 eV (g-C₃N₄), indicating improved conductivity. Electrochemically, V₂O₅ integration outperformed g-C₃N₄, making Fe₂WO₆@V₂O₅ the stronger candidate electrode for next-generation supercapacitors.</p>
-            </details>
             <template id="bib1">@article{Rashad2026Fe2WO6,
   author  = {Rashad, Mahnoor and Almohammedi, A. and Khan, M. I. and Mujtaba, A. and Ahmad, M. and Alzahrani, F. M. and Younas, U. and Saleem, A. and Iqbal, M. and Ul Islam, G.},
   title   = {Engineering Fe2WO6-based heterostructures for high-performance supercapacitors: the role of V2O5 and g-C3N4 integration},
@@ -738,12 +737,21 @@
   doi     = {10.1039/d6cp01274d}
 }</template>
           </div>
-          <div class="metrics">
-            <div class="metric hl"><div class="v grad-text">355.3<small>F g⁻¹</small></div><div class="l">Specific capacitance at 0.8 A g⁻¹ (Fe₂WO₆@V₂O₅)</div></div>
-            <div class="metric"><div class="v">2.67<small>Ω</small></div><div class="l">Charge-transfer resistance</div></div>
-            <div class="metric"><div class="v">87.4<small>%</small></div><div class="l">Cycling stability</div></div>
-            <div class="metric"><div class="v">38.7<small>m² g⁻¹</small></div><div class="l">BET surface area</div></div>
-            <div class="metric"><div class="v">2.59<small>eV</small></div><div class="l">Reduced band gap</div></div>
+          <div class="study">
+            <div class="study-text">
+              <span class="label">Summary of the study</span>
+              <p>Fe₂WO₆ nanoparticles were prepared hydrothermally, and Fe₂WO₆@V₂O₅ and Fe₂WO₆@g-C₃N₄ heterostructures were then built by in situ deposition. XRD and FTIR confirmed crystalline heterostructures with strong interfacial coupling, and SEM showed porous, interconnected morphologies suited to electrolyte access. BET analysis gave Fe₂WO₆@V₂O₅ the larger surface area (38.7 m² g⁻¹) and pore diameter (13.6 nm). UV–Vis showed narrowed band gaps of 2.59 eV (V₂O₅) and 2.71 eV (g-C₃N₄), indicating improved conductivity. Electrochemically, V₂O₅ integration outperformed g-C₃N₄, making Fe₂WO₆@V₂O₅ the stronger candidate electrode for next-generation supercapacitors.</p>
+            </div>
+            <div class="study-results">
+              <span class="label">Key results</span>
+              <div class="metrics">
+                <div class="metric hl"><div class="v grad-text">355.3<small>F g⁻¹</small></div><div class="l">Specific capacitance at 0.8 A g⁻¹ (Fe₂WO₆@V₂O₅)</div></div>
+                <div class="metric"><div class="v">2.67<small>Ω</small></div><div class="l">Charge-transfer resistance</div></div>
+                <div class="metric"><div class="v">87.4<small>%</small></div><div class="l">Cycling stability</div></div>
+                <div class="metric"><div class="v">38.7<small>m² g⁻¹</small></div><div class="l">BET surface area</div></div>
+                <div class="metric"><div class="v">2.59<small>eV</small></div><div class="l">Reduced band gap</div></div>
+              </div>
+            </div>
           </div>
         </div>
       </article>
